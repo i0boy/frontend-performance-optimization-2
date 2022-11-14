@@ -4,11 +4,29 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import InfoTable from "./components/InfoTable";
 import SurveyChart from "./components/SurveyChart";
+/**
+ * preloading with mouseEnter
+ */
+const handleMouseEnter = () => {
+  import("./components/ImageModal").then((module) => {
+    console.log("preloading with mouseenter");
+  });
+};
 
+/**
+ * preloading with module loading
+ */
+import("./components/ImageModal").then((module) => {
+  console.log("preloading with loading");
+});
 const ImageModal = React.lazy(() => import("./components/ImageModal"));
 function App() {
   const [showModal, setShowModal] = useState(false);
-
+  React.useEffect(() => {
+    import("./components/ImageModal").then((module) => {
+      console.log("preloading with mount");
+    });
+  }, []);
   return (
     <div className="App">
       <Header />
@@ -17,6 +35,7 @@ function App() {
         onClick={() => {
           setShowModal(true);
         }}
+        onMouseEnter={handleMouseEnter}
       >
         올림픽 사진 보기
       </ButtonModal>
