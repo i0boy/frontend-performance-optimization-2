@@ -1,13 +1,15 @@
-## Lecture-2
+## Lecture-1
 
-'프론트엔드 개발자를 위한, 실전 웹 성능 최적화(feat. React) - Part. 1' 2번째 강의 소스입니다.
+![frontend performance optimization guide](public/paste/2022-11-14-13-58-40.png)
+프론트엔드 성능 최적화 가이드 책의 part 2 실습 내용입니다.
+자세한 스텝은 커밋 내역을 참고 바랍니다.
 
 ### 실행
 
 1. download sources
 
 ```
-$ git clone https://github.com/performance-lecture/lecture-2.git
+$ git clone https://github.com/performance-lecture/lecture-1.git
 ```
 
 2. install dependencies
@@ -21,7 +23,7 @@ $ yarn
 3. start development server
 
 ```
-$ npm start
+$ npm run start
 or
 $ yarn start
 ```
@@ -33,8 +35,20 @@ $ npm run server
 or
 $ yarn server
 ```
-*3번의 dev server 와 다른 콘솔에서 띄워줍니다.
 
-### 질문
+\*3번의 dev server 와 다른 콘솔에서 띄워줍니다.
 
-궁금하신 부분은 강의 내 질문 & 답변 게시판을 이용해주시길 바랍니다.
+5. build + serve
+
+```
+$ npm run serve
+or
+$ yarn serve
+```
+
+### 실습 내용
+
+- 코드 병목지점 최적화
+- 코드 스플리팅 / 지연 로딩
+- 이미지 최적화
+- 텍스트 압축
