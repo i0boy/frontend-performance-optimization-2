@@ -46,6 +46,7 @@ const BarGraph = styled.div`
   width: 100%;
   transition: width 1.5s ease;
   transform: scaleX(${({ width }) => width / 100});
+  transform-origin: center left;
   height: 100%;
   background: ${({ isSelected }) =>
     isSelected ? "rgba(126, 198, 81, 0.7)" : "rgb(198, 198, 198)"};
