@@ -13,13 +13,14 @@ const handleMouseEnter = () => {
   });
 };
 
-/**
- * preloading with module loading
- */
-import("./components/ImageModal").then((module) => {
-  console.log("preloading with loading");
-});
-const ImageModal = React.lazy(() => import("./components/ImageModal"));
+// /**
+//  * preloading with module loading
+//  */
+// (async function lazyLoadModal() {})().then(() =>
+//   import("./components/ImageModal").then((module) => {
+//     console.log("preloading with loading");
+//   })
+// );
 function App() {
   const [showModal, setShowModal] = useState(false);
   React.useEffect(() => {
